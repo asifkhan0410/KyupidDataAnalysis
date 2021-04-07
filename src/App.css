@@ -1,38 +1,73 @@
 .App {
   text-align: center;
+  background-image: url(./images/pattern-bg.png);
+  background-repeat: repeat;
+  background-size: contain;
+  display: flex;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.data_buttons>button{
+  background-color: #000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  outline: none;
+  padding: 12px;
+  border-radius: 5px;
+  font-family: cursive;
+  margin: 5px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.data_buttons{
+  padding: 22px;
+  width: 30vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.data_buttons>h1{
   color: white;
+  font-family: cursive;
+}
+.data_buttons>p{
+  color: white;
+  font-weight: 300;
+  font-family: cursive;
+}
+.leaflet-container {
+  width: 70vw;
+  margin-top: auto;
+  z-index: 2;
+  height: 100vh;
+}
+.map__text{
+  font-weight: 700;
+  font-size: 10px;
+  color: black;
+  margin: 10px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width:415px){
+  .App{
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .data_buttons{
+    width: auto;
+    padding: 10px 22px;
+  }
+  .data_buttons>h1{
+    margin: 2px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  .data_buttons>button{
+    padding: 10px;
+  }
+  .data_buttons>p{
+    font-size: 9px;
+    letter-spacing: 0.5px;
+  }
+  .leaflet-container{
+    width: auto;
+    height: 62vh;
   }
 }
